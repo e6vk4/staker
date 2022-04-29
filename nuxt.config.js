@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/stakerfavicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -35,12 +35,14 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/content'],
+  modules: [
+    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/tailwindcss',
+    '@nuxt/content',
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
