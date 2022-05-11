@@ -203,16 +203,16 @@ export default {
     },
     // Returns a text label for the number of issues a company has.
     getIssuesCountLabel(ticker) {
-      const result = this.tickerIssuesMap.find((item) => item.ticker === ticker)
-      const length = result.issues.length
+      const result = this.getIssues(ticker)
+      const length = result.length
       let label = `${length} issues`
       if (length === 1) label = `${length} issue`
       return label
     },
     // Checks if a company has any issues.
     hasIssues(ticker) {
-      const result = this.tickerIssuesMap.find((item) => item.ticker === ticker)
-      return !!result.issues.length
+      const result = this.getIssues(ticker)
+      return !!result.length
     },
     // Updates the `filteredIssues` array.
     updateFilteredIssues(e) {
